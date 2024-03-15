@@ -118,3 +118,7 @@ body {
 .github_link:hover {
     cursor: pointer;
 }
+
+.image_clickable:hover {
+    cursor: pointer;
+}
