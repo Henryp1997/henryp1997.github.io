@@ -117,6 +117,22 @@ body {
     margin-left: 1rem
 }
 
+.run_plot_list {
+    margin-left: 1rem
+}
+
+.run_plot_list:hover {
+    cursor: pointer;
+}
+
+.running_plot_hidden {
+    display: none
+}
+
+.running_plot_shown {
+    text-align: center;
+}
+
 .github_link {
     color: #00ff00;
     text-decoration: none
