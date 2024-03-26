@@ -22,3 +22,22 @@ function show_run_plot(elem) {
         document.getElementById(id).className = "running_plot_hidden" 
     }
 }
+
+function show_darts_img(elem) {
+    // show darts screenshot and stats plot
+    ref_dict = {
+        " App GUI": "gui_img",
+        " Score frequency": "score_freq"
+    }
+
+    if (elem.innerHTML.includes("▸")) {
+        const id = ref_dict[elem.innerHTML.split("▸")[1]];
+        elem.innerHTML = elem.innerHTML.replace("▸", "▾");
+        document.getElementById(id).className = "running_plot_shown" 
+    }
+    else {
+        const id = ref_dict[elem.innerHTML.split("▾")[1]];
+        elem.innerHTML = elem.innerHTML.replace("▾", "▸");
+        document.getElementById(id).className = "running_plot_hidden" 
+    }
+}

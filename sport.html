@@ -4,7 +4,7 @@
 	<script type="text/javascript" src="JS/tabs.js"></script>
     <script type="text/javascript" src="JS/dark_mode.js"></script>
     <script type="text/javascript" src="JS/scroll_percentage.js"></script>
-    <script type="text/javascript" src="JS/show_run_plots.js"></script>
+    <script type="text/javascript" src="JS/show_sport_plots.js"></script>
 	<script>
 		const dark_mode = localStorage.getItem("dark_mode");
 		if (dark_mode) {
@@ -25,7 +25,7 @@
     <div class="heading_div" style="position: sticky; top: 0px;">
         <div style="height: 0.5rem; background-color: rgb(23, 45, 79);"></div>
 		<nav>
-			<div style="display: inline-block; width: 80%">
+			<div style="display: inline-block; width: 90%">
 				<a id="home_link" class="navbar_link" href="./index.html">▸ Profile</a>
 				<a id="programming_link" class="navbar_link" href="./programming.html">▸ Programming</a>
 				<a id="sport_link" class="navbar_link" href="./sport.html">▾ Sport</a>
@@ -62,6 +62,7 @@
              third metric, expressed as the colour of the points. My theory was that the longer the distance, the more accurate the averaging of heart rate
              becomes, and therefore, these distances should lie closer to the negative best fit line.
         </div>
+    <br>
     <a><b class="run_plot_list" onclick="show_run_plot(this)">▸ Distance</b></a>
     <br><br>
     <div class="running_plot_hidden" id="dist_plot">
@@ -104,6 +105,30 @@
         <a class="image_clickable" href="./assets/running/cadence_vs_pace.svg" target="_blank"><img src="./assets/running/cadence_vs_pace.svg" style="width: 90%; height: 90%"></img></a>
         <br>
     </div>
+
+    <b class="heading_18">Darts</b>
+    <div class="list_item">
+        I began playing darts occasionally in 2024 and ever since I have been interested in the statistics side of the game. I am curious to see how my accuracy and
+         average score per visit changes over time, and if it increases as I would expect through practice.
+        <div style="height: 0.5rem;"></div>
+        I decided to write an app in Plotly Dash (Python wrapper for HTML and JavaScript) which runs on my home network and can be accessed on a phone's browser.
+        <div style="height: 0.5rem;"></div>
+        This app is used to record each and every dart and keeps track of them in a .csv file, which can be accessed using Pandas for analysis.
+    </div>
+    <br>
+    <a><b class="run_plot_list" onclick="show_darts_img(this)">▸ App GUI</b></a>
+    <br><br>
+    <div class="running_plot_hidden" id="gui_img">
+        <a class="image_clickable" href="./assets/darts/gui_img.png" target="_blank"><img src="./assets/darts/gui_img.png" style="width: 25%; height: 25%"></img></a>
+        <br>
+    </div>
+    <a><b class="run_plot_list" onclick="show_darts_img(this)">▸ Score frequency</b></a>
+    <br><br>
+    <div class="running_plot_hidden" id="score_freq">
+        <a class="image_clickable" href="./assets/darts/score_freq.svg" target="_blank"><img src="./assets/darts/score_freq.svg" style="width: 100%; height: 100%"></img></a>
+        <br>
+    </div>
+
     </div>
 
 <div style="position: sticky; bottom: 0px;">
