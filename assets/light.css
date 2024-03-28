@@ -128,6 +128,14 @@ body {
     text-align: center;
 }
 
+.darts_plot_hidden {
+    display: none
+}
+
+.darts_plot_shown {
+    display: block;
+}
+
 .github_link {
     color: #0000ff;
     text-decoration: none

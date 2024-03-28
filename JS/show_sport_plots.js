@@ -33,11 +33,11 @@ function show_darts_img(elem) {
     if (elem.innerHTML.includes("▸")) {
         const id = ref_dict[elem.innerHTML.split("▸")[1]];
         elem.innerHTML = elem.innerHTML.replace("▸", "▾");
-        document.getElementById(id).className = "running_plot_shown" 
+        document.getElementById(id).className = "darts_plot_shown" 
     }
     else {
         const id = ref_dict[elem.innerHTML.split("▾")[1]];
         elem.innerHTML = elem.innerHTML.replace("▾", "▸");
-        document.getElementById(id).className = "running_plot_hidden" 
+        document.getElementById(id).className = "darts_plot_hidden" 
     }
 }
