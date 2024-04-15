@@ -5,6 +5,7 @@
     <script type="text/javascript" src="JS/dark_mode.js"></script>
     <script type="text/javascript" src="JS/scroll_percentage.js"></script>
     <script type="text/javascript" src="JS/show_sport_plots.js"></script>
+    <script tpye="text/javascript" src="JS/darts_checkboxes.js"></script>
 	<script>
 		const dark_mode = localStorage.getItem("dark_mode");
 		if (dark_mode) {
@@ -122,9 +123,10 @@
         <a class="image_clickable" href="./assets/darts/gui_img.png" target="_blank"><img src="./assets/darts/gui_img.png" style="width: 25%; height: 25%"></img></a>
         <br>
     </div>
-    <a><b class="run_plot_list" onclick="show_darts_img(this)">▸ Score frequency</b></a>
+
+    <a><b class="run_plot_list" onclick="show_darts_img(this)">▸ Score frequency (Treble 20s)</b></a>
     <br><br>
-    <div class="darts_plot_hidden" id="score_freq">
+    <div class="darts_plot_hidden" id="score_freq_t20">
         <div class="list_item">
         Below you can see the frequency of each score recorded during Treble 20 practice (aiming all three darts at the Treble 20). The numbers' appearances on the dart
          board have been linearised onto the x-axis, which is why the axis isn't in numerical order.
@@ -134,8 +136,50 @@
         Interestingly, a left skew is present - 5 and 12 are more common than
          1 and 18. This suggests I have a tendency to miss to the left of the 20 segment, highlighting that my throwing form needs to be corrected to the right.
         </div>
+
+        <div class="list_item" style="font-size: 0.9rem; display: inline-block; margin-right: 2rem">
+            <input onclick="darts_checkbox_t20(this)" type="checkbox" id="t20_first_dart" name="test" value="test" checked>First dart</input><br>
+            <input onclick="darts_checkbox_t20(this)" type="checkbox" id="t20_second_dart" name="test" value="test" checked>Second dart</input><br>
+            <input onclick="darts_checkbox_t20(this)" type="checkbox" id="t20_third_dart" name="test" value="test" checked>Third dart</input><br>
+        </div>
+        <div style="font-size: 0.9rem; display: inline-block">
+            <input onclick="darts_checkbox_t20(this)" type="checkbox" id="t20_singles" name="test" value="test" checked>Singles</input><br>
+            <input onclick="darts_checkbox_t20(this)" type="checkbox" id="t20_doubles" name="test" value="test" checked>Doubles</input><br>
+            <input onclick="darts_checkbox_t20(this)" type="checkbox" id="t20_trebles" name="test" value="test" checked>Trebles</input><br>
+        </div>
         <br>
-         <a class="image_clickable" href="./assets/darts/score_freq.svg" target="_blank"><img src="./assets/darts/score_freq.svg" style="width: 100%; height: 100%"></img></a>
+
+         <a id="t20_image_wrapper" class="image_clickable" href="./assets/darts/t20/score_freq_dart_all_sngl_dbl_tbl.svg" target="_blank"><img id="t20_image" src="./assets/darts/t20/score_freq_dart_all_sngl_dbl_tbl.svg" style="width: 100%; height: 100%"></img></a>
+        <br>
+    </div>
+
+    <a><b class="run_plot_list" onclick="show_darts_img(this)">▸ Score frequency (Treble 19s)</b></a>
+    <br><br>
+    <div class="darts_plot_hidden" id="score_freq_t19">
+        <div class="list_item">
+        Below you can see the frequency of each score recorded during Treble 19 practice (aiming all three darts at the Treble 19). The numbers' appearances on the dart
+         board have been linearised onto the x-axis, which is why the axis isn't in numerical order.
+        </div>
+        <br> 
+        <div class="list_item">
+        Interestingly, the left skew present in the Treble 20 plots is much less pronounced here -  7 and 16 are not necessarily more common than
+         3 and 17. This suggests I have a tendency to miss to the right or left about the same proportion of the time when aiming for 19s.
+        </div>
+
+        <div class="list_item" style="font-size: 0.9rem; display: inline-block; margin-right: 2rem">
+            <input onclick="darts_checkbox_t19(this)" type="checkbox" id="t19_first_dart" name="test" value="test" checked>First dart</input><br>
+            <input onclick="darts_checkbox_t19(this)" type="checkbox" id="t19_second_dart" name="test" value="test" checked>Second dart</input><br>
+            <input onclick="darts_checkbox_t19(this)" type="checkbox" id="t19_third_dart" name="test" value="test" checked>Third dart</input><br>
+        </div>
+        <div style="font-size: 0.9rem; display: inline-block">
+            <input onclick="darts_checkbox_t19(this)" type="checkbox" id="t19_singles" name="test" value="test" checked>Singles</input><br>
+            <input onclick="darts_checkbox_t19(this)" type="checkbox" id="t19_doubles" name="test" value="test" checked>Doubles</input><br>
+            <input onclick="darts_checkbox_t19(this)" type="checkbox" id="t19_trebles" name="test" value="test" checked>Trebles</input><br>
+        </div>
+        <br>
+
+        <br>
+         <a id="t19_image_wrapper" class="image_clickable" href="./assets/darts/t19/score_freq_dart_all_sngl_dbl_tbl.svg" target="_blank"><img id="t19_image" src="./assets/darts/t19/score_freq_dart_all_sngl_dbl_tbl.svg" style="width: 100%; height: 100%"></img></a>
         <br>
     </div>
 

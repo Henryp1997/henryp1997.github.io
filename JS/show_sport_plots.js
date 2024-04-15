@@ -25,9 +25,23 @@ function show_run_plot(elem) {
 
 function show_darts_img(elem) {
     // show darts screenshot and stats plot
-    ref_dict = {
-        " App GUI": "gui_img",
-        " Score frequency": "score_freq"
+    if (elem.innerHTML.includes("GUI")) {
+        ref_dict = {
+            " App GUI": "gui_img"
+        }
+    }
+
+    else if (elem.innerHTML.includes("20")) {
+        ref_dict = {
+            " App GUI": "gui_img",
+            " Score frequency (Treble 20s)": "score_freq_t20"
+        }
+    }
+
+    else if (elem.innerHTML.includes("19")) {
+        ref_dict = {
+            " Score frequency (Treble 19s)": "score_freq_t19"
+        }
     }
 
     if (elem.innerHTML.includes("▸")) {
