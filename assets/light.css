@@ -17,7 +17,7 @@ body {
 }
 
 .heading_div {
-    font-size: 1.15rem;
+    font-size: 1rem;
     color: white;
     text-align: center;
     background-color: #172d4f;
@@ -25,7 +25,7 @@ body {
 }
 
 .top_heading_div {
-    font-size: 1.15rem;
+    font-size: 1rem;
     color: white;
     background-color: #172d4f;
     font-family: 'Montserrat';
@@ -95,19 +95,19 @@ body {
 }
 
 .heading_18 {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     padding-bottom: 0.5rem;
     display: block
 }
 
 .heading_16 {
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding-bottom: 0.5rem;
     display: block
 }
 
 .list_item {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     padding-bottom: 0.25rem;
     margin-left: 1rem
 }
