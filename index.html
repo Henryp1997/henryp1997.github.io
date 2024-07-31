@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <head>
 	<link id="pagestyle" rel="stylesheet" href="./assets/light.css">
+	<script type="text/javascript" src="JS/side_menu.js"></script>
 	<script type="text/javascript" src="JS/tabs.js"></script>
     <script type="text/javascript" src="JS/dark_mode.js"></script>
     <script type="text/javascript" src="JS/scroll_percentage.js"></script>
@@ -13,37 +14,44 @@
 </head>
 <body>      
 	
-	<!-- NAVBAR -->
-    <div>
-		<div id="name" class="top_heading_div">
-        	<div>Henry Pickersgill</div>
-		</div>
-		<div class="heading_div">htap2@live.co.uk | 07470521144 | Cambridge, UK</div>
+	<!-- SIDE MENU -->
+	<div id="side_menu" class="side_menu">
+        <a class="close_menu_button" id="close_button" onclick="close_menu_btn_clicked()">&times;</a>
+        <a href="./index.html">▸ Home</a>
+        <a href="./programming.html">▸ Programming</a>
+        <a href="./sport.html">▸ Sport</a>
+        <a href="./papers.html">▸ Papers</a>
+		<a href="./piano.html">▸ Piano</a>
+		<a href="./photography.html">▸ Photography</a>
     </div>
 
+	<!-- NAVBAR -->
     <div class="heading_div" style="position: sticky; top: 0px;">
         <div style="height: 0.5rem; background-color: rgb(23, 45, 79);"></div>
 		<nav>
-			<!-- <div style="display: inline-block">
-				<img src="./assets/menu.png" style="width: 5%; height: 5%"></img>
-			</div> -->
-			<div style="display: inline-block; width: 90%">
-				<a id="home_link" class="navbar_link" href="./index.html">▾ Profile</a>
-				<a id="programming_link" class="navbar_link" href="./programming.html">▸ Programming</a>
-				<a id="sport_link" class="navbar_link" href="./sport.html">▸ Sport</a>
-				<a id="papers_link" class="navbar_link" href="./papers.html">▸ Papers</a>
-				<a id="piano_link" class="navbar_link" href="./piano.html">▸ Piano</a>
-				<a id="photography_link" class="navbar_link" href="./photography.html">▸ Photography</a>
-			</div>
-			<div style="display: inline-block">
-                <img src="./assets/sun.png" style="width: 20px; height: 20px"></img>
-            </div>
-            <div style="display: inline-block">
-                <button id="dark_mode_btn" class="dark_mode_btn" onclick="toggle_dark_mode()">
-                    <div class="dark_mode_inner"></div>
-                </button>
-            <div style="display: inline-block">
-                <img src="./assets/moon.png" style="width: 15px; height: 15px; margin-left: 0.8rem"></img>
+			<div>
+				<div id="name" class="top_heading_div" style="padding-top: 0.5rem; padding-bottom: 0.5rem; padding-left: 0.5rem">
+					<div>
+						<button class="menu_button" id="menu_button" onclick="main_menu_btn_clicked()">
+							☰ Menu
+						</button>
+					</div>
+					<div style="display: flex">	
+						<div>
+							Henry Pickersgill | htap2@live.co.uk | 07470521144 | Cambridge, UK
+							<div style="display: inline-block">
+								<img src="./assets/sun.png" style="width: 20px; height: 20px"></img>
+							</div>
+							<div style="display: inline-block">
+								<button id="dark_mode_btn" class="dark_mode_btn" onclick="toggle_dark_mode()">
+									<div class="dark_mode_inner"></div>
+								</button>
+							<div style="display: inline-block">
+								<img src="./assets/moon.png" style="width: 15px; height: 15px; margin-left: 0.8rem"></img>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 			<div style="height: 0.5rem; background-color: rgb(23, 45, 79);"></div>
 		</nav>
@@ -54,8 +62,9 @@
 	<div id="content_borders" class="content_border">
 
 	<div id="home_main_body" class="content">
-		<b style="font-size: 20px">PLEASE NOTE THAT THIS WEBSITE IS A WORK IN PROGRESS (there is lots still to be added!)</b>
-		<br><br>
+		<b style="font-size: 20px">UPDATES 07/2024</b>
+		<div>Changed layout from top nav bar to slide-out menu. Tweaked colours and some styling (e.g., font sizes)</div>
+		<br>
 		<b class="heading_18">About me</b>
 		<div class="list_item">
 		◦ MPhys &amp; BSc graduate from the University of Leeds
@@ -76,7 +85,7 @@
 		◦ Responsible for the development and test of Quantum Key Distribution systems (see
 		<a id="what_is_qkd_link" class="github_link" href="https://www.techtarget.com/searchsecurity/definition/quantum-key-distribution-QKD" target="_blank"> what is QKD?)</a>
 		<div style="height: 0.5rem;"></div>
-		◦ Co-developer in self-conceived automation project: large-scale front and back-end Python tool for automating
+		◦ Lead developer of self-conceived automation project: large-scale front and back-end Python tool for automating
 			the test and optimisation of QKD systems. Designed to speed up and simplify the test/optimisation procedures
 		<div style="height: 0.5rem;"></div>
 		◦ Maintainer and developer of C++ control code and Linux control servers, including development of new algorithms
@@ -87,21 +96,21 @@
 	<br>
 	<b class="heading_18">Technical interests</b>
 		<div class="list_item">
-		◦ Research science
+		◦ Research science, Physics
 		<div style="height: 0.5rem;"></div>
-		◦ Python development: plotting, data analysis, scripting for automation, etc
+		◦ Python development: plotting, data analysis, scripting for automation, Machine Learning etc
 		<div style="height: 0.5rem;"></div>
-		◦ Game and physics engine development
+		◦ Game development
 		<div style="height: 0.5rem;"></div>
-		◦ Electronics (e.g., Arduino), computers and other hardware
+		◦ Electronics (e.g., Arduino, Raspberry Pi), computers and other hardware
 		<div style="height: 0.5rem;"></div>
 		◦ 3D design for 3D printing
 		<div style="height: 0.5rem;"></div>
-		◦ Mathematical simulations, algorithms and general problem solving
+		◦ Mathematics, algorithms and general problem solving
 		<div style="height: 0.5rem;"></div>
 		◦ Windows and Android app development
 		<div style="height: 0.5rem;"></div>
-		◦ Music notation software and audio analysis
+		◦ Music notation software
 		</div>
 
 	</div>

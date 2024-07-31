@@ -25,11 +25,62 @@ body {
 }
 
 .top_heading_div {
-    font-size: 1rem;
+    font-size: 1.25rem;
     color: white;
     background-color: #172d4f;
     font-family: 'Montserrat';
-    text-align: center
+    justify-content: space-between;
+    align-items: center;
+    display: flex
+}
+
+.side_menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    background-color: #353535;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+    border-right: 2px #f2f2f2 solid
+}
+
+.side_menu a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-family: 'Montserrat';
+    color: white;
+    display: block;
+    transition: 0.2s
+}
+
+.menu_button {
+    background-color: #172d4f;
+    border: none;
+    color: white;
+    font-family: 'Montserrat';
+    font-size: 1.25rem
+}
+
+.menu_button:hover {
+    cursor: pointer;
+}
+
+.menu_button:active {
+    color: black
+}
+
+.close_menu_button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.close_menu_button:hover {
+    cursor: pointer;
 }
 
 .dark_mode_btn {
