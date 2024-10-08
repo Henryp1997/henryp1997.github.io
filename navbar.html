@@ -1,0 +1,39 @@
+<script type="text/javascript" src="JS/side_menu.js"></script>
+
+<div id="side_menu" class="side_menu">
+    <a class="close_menu_button" id="close_button" onclick="close_menu_btn_clicked()">&times;</a>
+    <a href="./index.html">▸ Home</a>
+    <a href="./programming.html">▸ Programming</a>
+    <a href="./sport.html">▸ Sport</a>
+    <a href="./papers.html">▸ Papers</a>
+    <a href="./piano.html">▸ Piano</a>
+    <a href="./photography.html">▸ Photography</a>
+</div>
+
+<div id="navbar" class="heading_div" style="position: sticky; top: 0px;">
+	<div style="height: 0.5rem; background-color: rgb(23, 45, 79);"></div>
+	<nav>
+		<div>
+			<div id="name" class="top_heading_div" style="padding-top: 0.5rem; padding-bottom: 0.5rem; padding-left: 0.5rem">
+				<div>
+					<button class="menu_button" id="menu_button" onclick="main_menu_btn_clicked()">
+						☰ Menu
+					</button>
+				</div>
+				<div style="display: flex; align-items: center;">	
+					<div>
+						Henry Pickersgill | htap2@live.co.uk | 07470521144 | Cambridge, UK
+						<div style="display: inline-flex; align-items: center; margin-left: 0.5rem;">
+							<button id="dark_mode_btn" class="dark_mode_btn" onclick="toggle_dark_mode()" style="border: none; background: transparent; padding: 0; cursor: pointer;">
+								<div class="dark_mode_inner" style="width: 40px; height: 20px; background-color: rgb(142, 142, 142); border-radius: 10px; position: relative;">
+									<div style="width: 20px; height: 20px; background-color: white; border-radius: 50%; position: absolute; transition: transform 0.2s; transform: translateX(0);" id="toggleCircle"></div>
+								</div>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div style="height: 0.5rem; background-color: rgb(23, 45, 79);"></div>
+	</nav>
+</div>
