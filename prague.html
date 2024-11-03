@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+	<link id="pagestyle" rel="stylesheet" href="./assets/light.css">
+	<script type="text/javascript" src="JS/side_menu.js"></script>
+	<script type="text/javascript" src="JS/tabs.js"></script>
+    <script type="text/javascript" src="JS/dark_mode.js"></script>
+    <script type="text/javascript" src="JS/scroll_percentage.js"></script>
+    <script type="text/javascript" src="JS/prague.js"></script>
+
+	<script>
+		const dark_mode = localStorage.getItem("dark_mode");
+		if (dark_mode) {
+			document.getElementById("pagestyle").setAttribute("href", dark_mode)
+		}
+	</script>
+</head>
+<body>
+	<!-- NAVBAR -->
+	<div id="navbar"></div> <!-- Navbar placeholder -->
+    <script src="JS/load_navbar.js"></script>
+
+	<!-- PRAGUE CONTENTS -->
+	<div id="top_content_v_spacer" class="v_spacer"></div>
+	<div id="content_borders" class="content_border">
+
+	<div id="prague_main_body" class="content">
+        <div id="password_div">
+            <b style="font-size: 1.8rem">Password</b>
+            <br>
+            <input class="passwd_input" id="prague_passwd" type="password"></input>
+            <br>
+            <button class="passwd_btn" onclick="check_password()">Submit</button>
+        </div>
+        <div style="display: none">
+            <a href="./assets/prague/IMG-20241103-WA0008.jpg" target="./blank">
+                <img src="./assets/prague/IMG-20241103-WA0008.jpg" height="25%" width="25%"></img>
+            </a>
+        </div>
+	</div>
+
+<div style="position: sticky; bottom: 0px;">
+	<div id="percentage_bar" style="background-image: linear-gradient(to right, rgb(17, 105, 39) 0%, rgb(255, 255, 255) 0%); background-color: rgb(255, 255, 255); height: 0.5rem;"></div>
+</div>
+
+</body>
+</html>
