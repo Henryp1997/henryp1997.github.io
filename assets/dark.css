@@ -150,14 +150,7 @@ body {
     line-height: 150%
 }
 
-.heading_18 {
-    font-size: 1.1rem;
-    padding-bottom: 0.5rem;
-    display: block
-}
-
-.heading_16 {
-    font-size: 1rem;
+.padded_block_heading {
     padding-bottom: 0.5rem;
     display: block
 }
