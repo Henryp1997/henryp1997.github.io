@@ -11,14 +11,17 @@ function show_run_plot(elem) {
         " Av. cadence vs Av. pace": "cad_vs_pace_plot"
     }
 
-    if (elem.innerHTML.includes("▸")) {
-        const id = ref_dict[elem.innerHTML.split("▸")[1]];
-        elem.innerHTML = elem.innerHTML.replace("▸", "▾");
+    const right_arrow = "\u25B6"
+    const down_arrow = "\u25BC"
+
+    if (elem.innerHTML.includes(right_arrow)) {
+        const id = ref_dict[elem.innerHTML.split(right_arrow)[1]];
+        elem.innerHTML = elem.innerHTML.replace(right_arrow, down_arrow);
         document.getElementById(id).className = "running_plot_shown" 
     }
     else {
-        const id = ref_dict[elem.innerHTML.split("▾")[1]];
-        elem.innerHTML = elem.innerHTML.replace("▾", "▸");
+        const id = ref_dict[elem.innerHTML.split(down_arrow)[1]];
+        elem.innerHTML = elem.innerHTML.replace(down_arrow, right_arrow);
         document.getElementById(id).className = "running_plot_hidden" 
     }
 }
@@ -44,14 +47,17 @@ function show_darts_img(elem) {
         }
     }
 
-    if (elem.innerHTML.includes("▸")) {
-        const id = ref_dict[elem.innerHTML.split("▸")[1]];
-        elem.innerHTML = elem.innerHTML.replace("▸", "▾");
+    const right_arrow = "\u25B6"
+    const down_arrow = "\u25BC"
+
+    if (elem.innerHTML.includes(right_arrow)) {
+        const id = ref_dict[elem.innerHTML.split(right_arrow)[1]];
+        elem.innerHTML = elem.innerHTML.replace(right_arrow, down_arrow);
         document.getElementById(id).className = "darts_plot_shown" 
     }
     else {
-        const id = ref_dict[elem.innerHTML.split("▾")[1]];
-        elem.innerHTML = elem.innerHTML.replace("▾", "▸");
+        const id = ref_dict[elem.innerHTML.split(down_arrow)[1]];
+        elem.innerHTML = elem.innerHTML.replace(down_arrow, right_arrow);
         document.getElementById(id).className = "darts_plot_hidden" 
     }
 }
