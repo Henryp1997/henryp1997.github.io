@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+	<link id="pagestyle" rel="stylesheet" href="./assets/light.css">
+	<script type="text/javascript" src="JS/side_menu.js"></script>
+	<script type="text/javascript" src="JS/tabs.js"></script>
+    <script type="text/javascript" src="JS/dark_mode.js"></script>
+    <script type="text/javascript" src="JS/scroll_percentage.js"></script>
+	<script>
+		const dark_mode = localStorage.getItem("dark_mode");
+		if (dark_mode) {
+			document.getElementById("pagestyle").setAttribute("href", dark_mode)
+		}
+	</script>
+</head>
+<body>      
+	<!-- NAVBAR -->
+    <div id="navbar"></div> <!-- Navbar placeholder -->
+    <script src="JS/load_navbar.js"></script>
+
+    <!-- PAPERS CONTENTS -->
+    <div id="top_content_v_spacer" class="v_spacer"></div>
+    <div id="content_borders" class="content_border">
+
+    <div class="content" style="width: 95%">
+		<b class="padded_block_heading", style="font-size: 46px; padding: 4rem; padding-bottom: 0rem">Hi verity (floof)</b>
+        <div style="font-size: 46px; line-height: 1.3; padding: 4rem; padding-bottom: 0rem">
+            I just wanted to tell you how wonderful you are, and to thank you for being so kind and treating me with so much care and patience.
+        </div>
+        <div style="font-size: 46px; line-height: 1.3; padding: 4rem; padding-bottom: 0rem">
+            I really enjoy spending time with you and I'm so sorry for struggling with all these big emotions. Just know that it means I value this connection with you enormously already.
+        </div>
+        <div style="font-size: 46px; line-height: 1.3; padding: 4rem; padding-bottom: 0rem">
+            Please see big hugs below :)
+        </div>
+        <div style="display: inline-block; text-align: center; padding: 4rem; padding-bottom: 0rem">
+            <a href="./assets/sully_boo.gif" target="_blank"><img src="./assets/sully_boo.gif" style="height: 300%; width: 300%;"></a>
+        </div>
+        <br><br><br>
+	</div>
+
+<div style="position: sticky; bottom: 0px;">
+    <div id="percentage_bar" style="background-image: linear-gradient(to right, rgb(17, 105, 39) 0%, rgb(255, 255, 255) 0%); background-color: rgb(255, 255, 255); height: 0.5rem;"></div>
+</div>
+
+</body>
+</html>
