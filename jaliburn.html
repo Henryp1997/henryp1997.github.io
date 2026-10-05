@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+	<link id="pagestyle" rel="stylesheet" href="./assets/light.css">
+	<script type="text/javascript" src="JS/side_menu.js"></script>
+	<script type="text/javascript" src="JS/tabs.js"></script>
+    <script type="text/javascript" src="JS/dark_mode.js"></script>
+    <script type="text/javascript" src="JS/scroll_percentage.js"></script>
+	<script>
+		const dark_mode = localStorage.getItem("dark_mode");
+		if (dark_mode) {
+			document.getElementById("pagestyle").setAttribute("href", dark_mode)
+		}
+	</script>
+</head>
+<body>      
+	<!-- NAVBAR -->
+    <div id="navbar"></div> <!-- Navbar placeholder -->
+    <script src="JS/load_navbar.js"></script>
+
+    <!-- PAPERS CONTENTS -->
+    <div id="top_content_v_spacer" class="v_spacer"></div>
+    <div id="content_borders" class="content_border">
+
+    <div class="content" style="width: 95%">
+		<b class="padded_block_heading", style="font-size: 46px; padding: 4rem; padding-bottom: 0rem">Jaliburn Dornt</b>
+		<b class="padded_block_heading", style="font-size: 46px; padding: 4rem; padding-bottom: 0rem">Bonsiderun Crondlepullingham</b>
+		<b class="padded_block_heading", style="font-size: 46px; padding: 4rem; padding-bottom: 0rem">Baljaderry Pringus</b>
+		<b class="padded_block_heading", style="font-size: 46px; padding: 4rem; padding-bottom: 0rem">Diggerson Dong</b>
+		<b class="padded_block_heading", style="font-size: 46px; padding: 4rem; padding-bottom: 0rem">Radaman Bont</b>
+        <div style="display: inline-block; text-align: center; padding: 4rem; padding-bottom: 0rem">
+            <a href="./assets/fred.jpg" target="_blank"><img src="./assets/fred.jpg" style="height: 150%; width: 150%;"></a>
+        </div>
+	</div>
+
+<div style="position: sticky; bottom: 0px;">
+    <div id="percentage_bar" style="background-image: linear-gradient(to right, rgb(17, 105, 39) 0%, rgb(255, 255, 255) 0%); background-color: rgb(255, 255, 255); height: 0.5rem;"></div>
+</div>
+
+</body>
+</html>
